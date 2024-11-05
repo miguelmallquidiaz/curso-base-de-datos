@@ -75,17 +75,29 @@ GO
 SELECT * FROM ##TC
 GO
 
-/*Esquemas*/
+/*Esquemas 
+
+Ventas
+Facturacion
+Compras
+Cobranza
+Almacen
+Pagos
+Personal
+Sistemas
+Transportes
+
+*/
 USE empresa
 GO
 IF EXISTS(
 	SELECT name
 	FROM sys.schemas
-	WHERE name = 'Compras'
+	WHERE name = 'Transportes'
 )
-DROP SCHEMA Compras
+DROP SCHEMA Transportes
 GO
-CREATE SCHEMA Compras
+CREATE SCHEMA Transportes
 Go
 SELECT name
 FROM sys.schemas
